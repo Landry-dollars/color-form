@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h1>Se connecter</h1>
+            <div class="box">
+                <input type="email" name="" id="" placeholder="Enter your email here">
+            </div>
+            <div class="box">
+                <input type="password" name="" id="" placeholder="Enter your password here">
+            </div>
+            <div class="box">
+                <input type="submit" name="" id="btn" value="Envoyer">
+            </div>
+        </form>
+
+        <div class="form-right">
+            <h1>Bienvenue</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <!-- ajouter des couleurs -->
+     <div class="colors-form">
+        <span onclick="changeColor('red')"  style="--i: red;"></span>
+        <span onclick="changeColor('gold')"  style="--i: gold;"></span>
+        <span onclick="changeColor('green')"  style="--i: green;"></span>
+        <span onclick="changeColor('pink')"  style="--i: pink;"></span>
+        <span onclick="changeColor('blue')"  style="--i: blue;"></span>
+     </div>
+
+     <!-- JavaScript -->
+      <script>
+        const formRight = document.querySelector('.form-right');
+        const btn = document.querySelector('#btn');
+        const h1 = document.querySelector('form h1');
+
+        function changeColor(color) {
+            formRight.style.background = color;
+            btn.style.background = color;
+            h1.style.color = color;
+        }
+      </script>
+</body>
+</html>
